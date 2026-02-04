@@ -1,0 +1,564 @@
+*{
+    /* background-color: lightblue; */
+    font-style: oblique;
+}
+#signup-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#signup-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Error / Success */
+#signup-error {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#signup-success {
+  color: green;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Form inputs */
+#signup-form input,
+#signup-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.3s;
+}
+
+#signup-form input:focus,
+#signup-form select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* Button */
+#signup-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#signup-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* ===========login=========== */
+/* Container */
+#login-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Error message */
+#login-error {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Form inputs */
+#login-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.3s;
+}
+
+#login-form input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* Button */
+#login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#login-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* ============admin-dashord===== */
+/* Container */
+#admin-container {
+  width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#admin-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Logged in info */
+#admin-info {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Actions list */
+#admin-actions {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#admin-actions li {
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+#admin-actions button,
+#logout-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#admin-actions button:hover,
+#logout-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* ===========createstudent========= */
+/* Container */
+#create-student-container {
+  width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#create-student-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* Buttons */
+#create-student-btn,
+#cancel-student-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#cancel-student-btn {
+  background-color: #6c757d;
+}
+
+#create-student-btn:hover {
+  background-color: #0056b3;
+}
+
+#cancel-student-btn:hover {
+  background-color: #5a6268;
+}
+/* ==============viewstudent================= */
+/* Container */
+#view-student-container {
+  width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#view-student-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Student info */
+.view-student-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.view-student-info b {
+  margin-right: 5px;
+}
+
+/* Back button */
+#back-student-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#back-student-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* ==========student-list=========== */
+/* Container */
+#student-list-container {
+  width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#student-list-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Search */
+#student-search {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#student-search input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#student-search button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#student-search button:hover {
+  background-color: #0056b3;
+}
+
+/* Table */
+#student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#student-table th,
+#student-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#student-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Action buttons */
+#student-table button {
+  margin: 0 3px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+#student-table button[id^="view-btn"] {
+  background-color: #17a2b8;
+}
+
+#student-table button[id^="edit-btn"] {
+  background-color: #ffc107;
+}
+
+#student-table button[id^="delete-btn"] {
+  background-color: #dc3545;
+}
+
+#student-table button:hover {
+  opacity: 0.8;
+}
+
+/* Pagination */
+#student-pagination button {
+  padding: 5px 10px;
+  margin: 0 3px;
+  border: 1px solid #007BFF;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: #007BFF;
+  transition: 0.3s;
+}
+
+#student-pagination button.active-page {
+  background-color: #007BFF;
+  color: white;
+}
+
+#student-pagination button:hover:not(.active-page) {
+  background-color: #e6f0ff;
+}
+
+/* =====editstudent================= */
+
+/* Container */
+#edit-student-container {
+  width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#edit-student-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* Buttons */
+#update-student-btn,
+#cancel-edit-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#cancel-edit-btn {
+  background-color: #6c757d;
+}
+
+#update-student-btn:hover {
+  background-color: #0056b3;
+}
+
+#cancel-edit-btn:hover {
+  background-color: #5a6268;
+}
+/* =============userdata ================ */
+
+#user-data-container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+#user-data-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* User info */
+#user-info p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+
+#user-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#user-data-table th,
+#user-data-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#user-data-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+
+#back-user-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6c757d;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#back-user-btn:hover {
+  background-color: #5a6268;
+}
