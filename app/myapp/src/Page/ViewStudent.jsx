@@ -18,7 +18,7 @@ const ViewStudent = () => {
       })
       .then((res) => setStudent(res.data))
       .catch(() => alert("Student not found"));
-  }, []);
+  }, [id,navigate,token]);
 
   if (!student) return <p>Loading...</p>;
 

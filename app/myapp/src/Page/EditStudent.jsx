@@ -27,7 +27,7 @@ const EditStudent = () => {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setStudent(res.data));
-  }, []);
+  }, [id, navigate, token,role]);
 
   const handleChange = (e) => {
     setStudent({ ...student, [e.target.name]: e.target.value });
