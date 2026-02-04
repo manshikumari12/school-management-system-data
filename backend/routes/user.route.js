@@ -38,23 +38,23 @@ userroute.post("/register", async (req, res) => {
         .json({ msg: "Password must be at least 6 characters" });
     }
 
-    // 2. Check existing user
+   
     const existingUser = await usermodel.findOne({ email });
     if (existingUser) {
       return res.status(409).json({ msg: "User already exists" });
     }
 
-    // 3. Hash password
+ 
     const hashedPassword = bcrypt.hashSync(password, 10);
 
-    // 4. Role handling (simple & safe)
-    let userRole = "user"; // default
+   
+    let userRole = "user"; 
 
     if (role === "admin") {
       userRole = "admin";
     }
 
-    // 5. Create user
+   
     const user = await usermodel.create({
       name,
       email,
@@ -80,24 +80,23 @@ userroute.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // 1. Validation
+  
     if (!email || !password) {
       return res.status(400).json({ msg: "Email and password are required" });
     }
 
-    // 2. Find user
+  
     const user = await usermodel.findOne({ email });
     if (!user) {
       return res.status(404).json({ msg: "User not found" });
     }
 
-    // 3. Password check
+   
     const isMatch = bcrypt.compareSync(password, user.password);
     if (!isMatch) {
       return res.status(401).json({ msg: "Incorrect password" });
     }
 
-    // 4. ROLE CHECK (EXACTLY AS YOU WANT)
     let role;
 
     if (user.role === "admin") {
@@ -108,14 +107,13 @@ userroute.post("/login", async (req, res) => {
       return res.status(403).json({ msg: "Invalid role assigned" });
     }
 
-    // 5. Generate JWT
     const token = jwt.sign(
       { id: user._id, role: role },
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
 
-    // 6. Response
+  
     res.status(200).json({
       msg: "Login successful",
       token,

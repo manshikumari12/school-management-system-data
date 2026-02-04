@@ -8,9 +8,9 @@ const {
   userOrAdmin,
 } = require("../auth/auth");
 
-/**
- * ➕ CREATE STUDENT (Admin only)
- * POST /api/students
+/*
+ CREATE STUDENT (Admin only)
+  POST /api/students
  */
 studentrouter.post(
     "/students",
@@ -20,14 +20,14 @@ studentrouter.post(
       try {
         const { name, email, age, course, status } = req.body;
   
-        // Validation
+    
         if (!name || !email) {
           return res
             .status(400)
             .json({ message: "Name and Email are required" });
         }
   
-        // Check existing student
+       
         const existingStudent = await studentmodel.findOne({ email });
         if (existingStudent) {
           return res
@@ -42,7 +42,7 @@ studentrouter.post(
           age,
           course,
           status,
-          createdBy: req.user.id, // 🔑 from JWT (admin id)
+          createdBy: req.user.id, // from JWT 
         });
   
         res.status(201).json({
@@ -56,11 +56,7 @@ studentrouter.post(
   );
   
 
-/**
- * 📄 GET ALL STUDENTS (Admin only)
- * GET /api/students
- * 
- */
+
 
 // GET ALL STUDENTS (Admin only)
 // Student List:
@@ -128,8 +124,8 @@ studentrouter.get("/students", authMiddleware, adminOnly, async (req, res) => {
 // });
 
 /**
- * 👀 GET SINGLE STUDENT (Admin + User)
- * GET /api/students/:id
+ GET SINGLE STUDENT (Admin + User)
+ GET /api/students/:id
  */
 studentrouter.get("/students/:id", authMiddleware, userOrAdmin, async (req, res) => {
   try {
@@ -146,8 +142,8 @@ studentrouter.get("/students/:id", authMiddleware, userOrAdmin, async (req, res)
 });
 
 /**
- * ✏️ UPDATE STUDENT (Admin only)
- * PUT /api/students/:id
+  UPDATE STUDENT (Admin only)
+ PUT /api/students/:id
  */
 studentrouter.put("/students/:id", authMiddleware, adminOnly, async (req, res) => {
   try {
@@ -171,8 +167,8 @@ studentrouter.put("/students/:id", authMiddleware, adminOnly, async (req, res) =
 });
 
 /**
- * 🗑 DELETE STUDENT (Admin only)
- * DELETE /api/students/:id
+ DELETE STUDENT (Admin only)
+ DELETE /api/students/:id
  */
 studentrouter.delete("/students/:id", authMiddleware, adminOnly, async (req, res) => {
   try {

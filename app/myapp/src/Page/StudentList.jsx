@@ -45,7 +45,7 @@ const StudentList = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Student deleted successfully");
-      fetchStudents(); // refresh list
+      fetchStudents();
     } catch (error) {
       console.error(error);
       alert("Delete failed");
@@ -56,7 +56,7 @@ const StudentList = () => {
    <div id="student-list-container">
   <h2 id="student-list-title">Student List</h2>
 
-  {/* Search */}
+ 
   <div id="student-search">
     <input
       id="student-search-input"

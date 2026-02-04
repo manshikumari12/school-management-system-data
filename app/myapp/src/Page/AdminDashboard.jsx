@@ -8,7 +8,7 @@ const AdminDashboard = () => {
     const token = localStorage.getItem("token");
     const role = localStorage.getItem("role");
 
-    // 🔐 Protect admin route
+
     if (!token || role !== "admin") {
       navigate("/login");
     }

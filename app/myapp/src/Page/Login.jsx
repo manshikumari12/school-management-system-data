@@ -35,12 +35,11 @@ const Login = () => {
         return setError(data.msg);
       }
 
-      // ✅ Store auth data
+   
       localStorage.setItem("token", data.token);
       localStorage.setItem("role", data.user.role);
       localStorage.setItem("email", data.user.email);
 
-      // ✅ Role based navigation
       if (data.user.role === "admin") {
         navigate("/admin-dashboard");
       } else if (data.user.role === "user") {

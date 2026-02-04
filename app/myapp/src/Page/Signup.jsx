@@ -46,7 +46,7 @@ const Signup = () => {
 
       setSuccess(res.data.msg);
 
-      // Redirect to login after success
+     
       setTimeout(() => {
         navigate("/login");
       }, 1500);

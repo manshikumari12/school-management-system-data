@@ -19,10 +19,10 @@ const studentschema = mongoose.Schema(
       default: "Active",
     },
 
-    // 🔑 RBAC Support (who created this student)
+    //  RBAC Support 
     createdBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "user", // User model
+      ref: "user", 
       required: true,
     },
   },

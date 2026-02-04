@@ -31,7 +31,6 @@ const UserData = () => {
         },
       });
 
-      // 🔑 CRITICAL LINE (prevents map error)
       setUsers(res.data.users || []);
     } catch (error) {
       console.error(error);
