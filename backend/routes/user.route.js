@@ -5,7 +5,7 @@ const jwt=require("jsonwebtoken")
 // const { blackmodel } = require("../models/blacklistmodel.")
 const { authMiddleware ,  adminOnly,
   userOrAdmin} = require("../auth/auth")
-// const { client } = require("../utils/reids")
+
 
 const userroute=express.Router()
 
@@ -18,20 +18,20 @@ userroute.post("/register", async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
 
-    // 1. Validation
+
     if (!name || !email || !password) {
       return res
         .status(400)
         .json({ msg: "Name, email and password are required" });
     }
 
-    // Email format check
+  
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return res.status(400).json({ msg: "Invalid email format" });
     }
 
-    // Password length
+
     if (password.length < 6) {
       return res
         .status(400)
