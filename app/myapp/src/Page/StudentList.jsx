@@ -16,7 +16,7 @@ const StudentList = () => {
 
   useEffect(() => {
     fetchStudents();
-  }, [page, search]);
+  }, [page,fetchStudents, search]);
 
   const fetchStudents = async () => {
     try {

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const UserData = () => {
   const navigate = useNavigate();
 
-  // ✅ Always initialize as array
+
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -14,14 +14,14 @@ const UserData = () => {
   const email = localStorage.getItem("email");
 
   useEffect(() => {
-    // 🔐 Route protection
+  
     if (!token || (role !== "admin" && role !== "user")) {
       navigate("/login");
       return;
     }
 
     fetchUsers();
-  }, []);
+  }, [token, role, navigate, fetchUsers]);
 
   const fetchUsers = async () => {
     try {
